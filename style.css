@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+header {
+  text-align: center;
+  padding: 20px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number {
+  text-align: center;
+  font-size: 4rem;
+  background-color: white;
+  color: black;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess {
+  padding: 25px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 10px;
+  margin: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
