@@ -20,7 +20,8 @@ checkButton.addEventListener("click", function () {
     displayMessage("No Number!");
     // When player Wins
   } else if (guessValue === number) {
-    document.querySelector(".message").textContent = "You Win!";
+    // document.querySelector(".message").textContent = "You Win!";
+    displayMessage("You Win!");
     document.querySelector(".number").textContent = number;
     document.querySelector("body").style.backgroundColor = "green";
     if (score > highScore) {
@@ -30,13 +31,15 @@ checkButton.addEventListener("click", function () {
     // If Guess Too High
   } else if (guessValue !== number) {
     if (score > 1) {
-      document.querySelector(".message").textContent =
-        guessValue > number ? "Too high" : "Too Low";
+      //   document.querySelector(".message").textContent =
+      //     guessValue > number ? "Too high" : "Too Low";
+      displayMessage(guessValue > number ? "Too high" : "Too Low");
       // Have to decrease the score BEFORE putting it in the textcontent
       score--;
       document.querySelector(".current-score").textContent = score;
     } else {
-      document.querySelector(".message").textContent = "You Lose";
+      //   document.querySelector(".message").textContent = "You Lose";
+      displayMessage("You Lose!");
       document.querySelector(".current-score").textContent = 0;
       document.querySelector(".number").textContent = number;
       document.querySelector("body").style.backgroundColor = "red";
